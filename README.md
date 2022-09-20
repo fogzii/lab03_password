@@ -39,7 +39,7 @@ In this lab, your goal is to rate the strength of a password using a set of requ
 
 1. Install Jest as a development dependency by specifying the option `--save-dev`. We do this because testing packages are unnecessary in production code.
     ```shell
-    $ npm install --save-dev jest # shortcut: npm i -D jest
+    $ npm install --save-dev jest@28.1.0 # shortcut: npm i -D jest@28.1.0
     ```
 
 1. For compatibility with our new import/export syntax, we will also install [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env).
