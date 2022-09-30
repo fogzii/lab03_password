@@ -4,7 +4,9 @@
 
 ## Due Date
 
-Week 4 Monday 5:00 pm AEST
+~~Week 4 Monday 5:00 pm AEST~~ (extended by 17 hours due to the public holiday on Monday 03.10.2022, for 22T3)
+
+Week 4 Tuesday 10:00 am AEST
 
 ## Background
 
