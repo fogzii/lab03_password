@@ -9,7 +9,7 @@ describe('Strong Passwords', () => {
   test('Generic cases', () => {
     expect(checkPassword('Welcome12345')).toEqual('Strong Password');
     // basically a repeated test except with special characters
-    expect(checkPassword('P!neappl3Ju!ce47').toEqual('Strong Password'));
+    expect(checkPassword('P!neappl3Ju!ce47')).toEqual('Strong Password');
   });
 });
 
@@ -28,10 +28,10 @@ describe('Moderate Passwords', () => {
 describe('Horrible Passwords', () => {
   test('Passwords on Nordpass website (generic cases)', () => {
     expect(checkPassword('123456')).toEqual('Horrible Password');
-    expect(checkPassword('123456789').toEqual('Horrible Password'));
-    expect(checkPassword('12345').toEqual('Horrible Password'));
-    expect(checkPassword('qwerty').toEqual('Horrible Password'));
-    expect(checkPassword('password').toEqual('Horrible Password'));
+    expect(checkPassword('123456789')).toEqual('Horrible Password');
+    expect(checkPassword('12345')).toEqual('Horrible Password');
+    expect(checkPassword('qwerty')).toEqual('Horrible Password');
+    expect(checkPassword('password')).toEqual('Horrible Password');
   });
 });
 
