@@ -29,11 +29,63 @@
  * @returns {string} string to indicate the strength of the password.
  */
 export function checkPassword(password) {
-  // FIXME
-  return '';
+  if (HorriblePw(password) === true) {
+    return 'Horrible Password';
+  } else if (StrongPw(password) === true) {
+    return 'Strong Password';
+  } else if (ModeratePw(password) === true) {
+    return 'Moderate Password';
+  } else {
+    return 'Poor Password';
+  }
 }
 
-/**
- * Testing will no longer be done in here.
- * See password.test.js
- */
+function HorriblePw(password) {
+  if (password === '123456' || password === '123456789' 
+      || password === '12345' || password === 'qwerty' 
+      || password === 'password') {
+    return true;
+  }
+  return false;
+}
+
+function StrongPw(password) {
+  if (password.length < 12) {
+    return false; 
+  }  
+
+  // test to check if password contains a number
+  if (/\d/.test(password) === false) {
+    return false;
+  }
+
+  if (!hasLowerCase(password) || !hasUpperCase(password)) {
+    return false;
+  }
+  return true;
+}
+
+function ModeratePw(password) {
+  if (password.length < 8) {
+    return false; 
+  }  
+
+  // test to check if password contains a number
+  if (/\d/.test(password) === false) {
+    return false;
+  }
+
+  if (!hasLowerCase(password) && !hasUpperCase(password)) {
+    return false;
+  }
+  return true;
+}
+
+
+function hasLowerCase(str) {
+  return str.toUpperCase() != str;
+}
+
+function hasUpperCase(str) {
+  return str.toLowerCase() != str;
+}
